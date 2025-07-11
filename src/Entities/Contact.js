@@ -45,7 +45,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+
+          <h2 className="text-4xl text-blue-500 md:text-5xl font-light text-gray-900 mb-8">
             Let's Work Together
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed font-light">
