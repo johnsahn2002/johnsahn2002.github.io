@@ -45,7 +45,7 @@ export default function Navigation() {
             className="font-light text-xl md:text-2xl text-gray-900 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            AC
+            JSA
           </motion.div>
 
           {/* Desktop Navigation */}

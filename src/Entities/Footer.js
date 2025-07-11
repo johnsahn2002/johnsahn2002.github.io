@@ -13,18 +13,18 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-2xl font-light mb-6">Alex Chen</h3>
+          <h3 className="text-2xl font-light mb-6">John Ahn</h3>
           
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/jahn5244" target="_blank" rel="noopener noreferrer" 
                className="text-gray-400 hover:text-white transition-colors duration-300">
               <Github size={24} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/john-shinwoo-ahn" target="_blank" rel="noopener noreferrer"
                className="text-gray-400 hover:text-white transition-colors duration-300">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:alex@example.com"
+            <a href="mailto:johnsahn2002@gmail.com.com"
                className="text-gray-400 hover:text-white transition-colors duration-300">
               <Mail size={24} />
             </a>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400 flex items-center justify-center gap-2">
-              Made with <Heart className="w-4 h-4 text-red-500" /> by Alex Chen
+              Made with <Heart className="w-4 h-4 text-red-500" /> by John Shinwoo Ahn
             </p>
             <p className="text-gray-500 text-sm mt-2">
               © {new Date().getFullYear()} All rights reserved.

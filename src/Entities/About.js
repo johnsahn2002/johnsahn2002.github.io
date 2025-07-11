@@ -24,9 +24,9 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed font-light">
-            I'm a passionate developer and designer with over 5 years of experience creating 
-            digital solutions that make a difference. I believe in the power of clean code, 
-            beautiful design, and user-centered thinking.
+            I’m a driven data scientist and developer passionate about building intelligent systems 
+            that create real-world impact. With hands-on experience across machine learning, data engineering, 
+            and ethical AI, I craft end-to-end solutions that are both technically sound and user-focused.
           </p>
         </motion.div>
 
