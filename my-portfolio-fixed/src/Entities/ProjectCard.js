@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 
 export default function ProjectCard({ project, index }) {
   return (
@@ -41,13 +39,12 @@ export default function ProjectCard({ project, index }) {
           <div className="mb-6">
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, techIndex) => (
-                <Badge 
-                  key={techIndex} 
-                  variant="secondary"
-                  className="bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors duration-200"
+                <span 
+                  key={techIndex}
+                  className="inline-block bg-gray-100 text-gray-700 text-sm px-2 py-1 rounded-full hover:bg-gray-200 transition-colors duration-200"
                 >
                   {tech}
-                </Badge>
+                </span>
               ))}
             </div>
           </div>
@@ -55,30 +52,26 @@ export default function ProjectCard({ project, index }) {
 
         <div className="flex gap-3">
           {project.project_url && (
-            <Button 
-              variant="outline" 
-              size="sm"
-              asChild
-              className="border-gray-200 text-gray-700 hover:bg-gray-50 transition-all duration-300"
+            <a 
+              href={project.project_url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-gray-200 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition"
             >
-              <a href={project.project_url} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Live Demo
+            </a>
           )}
           {project.github_url && (
-            <Button 
-              variant="outline" 
-              size="sm"
-              asChild
-              className="border-gray-200 text-gray-700 hover:bg-gray-50 transition-all duration-300"
+            <a 
+              href={project.github_url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-gray-200 text-gray-700 px-4 py-2 rounded text-sm hover:bg-gray-50 transition"
             >
-              <a href={project.github_url} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" />
-                Code
-              </a>
-            </Button>
+              <Github className="w-4 h-4 mr-2" />
+              Code
+            </a>
           )}
         </div>
       </div>

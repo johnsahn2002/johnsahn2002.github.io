@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export default function Hero() {
   const scrollToSection = (sectionId) => {
@@ -49,19 +48,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button 
+            <button
               onClick={() => scrollToSection('projects')}
-              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105"
+              className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 rounded"
             >
               View My Work
-            </Button>
-            <Button 
-              variant="outline"
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
-              className="border-gray-300 text-gray-900 hover:bg-gray-50 px-8 py-6 text-lg font-medium transition-all duration-300"
+              className="border border-gray-300 text-gray-900 hover:bg-gray-50 px-8 py-6 text-lg font-medium transition-all duration-300 rounded"
             >
               Get In Touch
-            </Button>
+            </button>
           </motion.div>
 
           <motion.div 

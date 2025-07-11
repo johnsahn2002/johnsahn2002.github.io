@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Project } from '@/entities/Project';
+import Project from '../Components/Project';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {

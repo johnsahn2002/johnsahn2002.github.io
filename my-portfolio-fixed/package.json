@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://johnsahn2002.github.io",
   "dependencies": {
+    "framer-motion": "^12.23.3",
+    "lucide-react": "^0.525.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1"
@@ -18,5 +20,17 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
