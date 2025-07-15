@@ -1,6 +1,6 @@
 # 🌐 johnsahn2002.github.io
 
-Welcome to my personal portfolio website, built with GitHub Pages and designed to showcase my experience in data science, machine learning, and web development.
+Welcome to my personal portfolio website, built with GitHub Pages and designed to showcase my experience in data science, machine learning, and business insight development.
 
 ## 🚀 Live Site
 
