@@ -37,9 +37,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Creative Developer & Designer crafting digital experiences
+            Innovative Data Scientist & Developer transforming ideas into
             <br className="hidden md:block" />
-            that inspire and engage
+            impactful, data-driven digital solutions
           </motion.p>
 
           <motion.div 

@@ -1,13 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Palette, Zap, Heart } from 'lucide-react';
+import { Code, Database, BarChart2, Brain } from 'lucide-react';
 
 export default function About() {
   const skills = [
-    { name: 'Frontend Development', icon: Code, description: 'React, Vue.js, TypeScript' },
-    { name: 'UI/UX Design', icon: Palette, description: 'Figma, Adobe Creative Suite' },
-    { name: 'Performance', icon: Zap, description: 'Optimization & Best Practices' },
-    { name: 'Passion', icon: Heart, description: 'Creating meaningful experiences' }
+    {
+      name: 'Full-Stack Data Science',
+      icon: Code,
+      description: 'Python, R, SQL · Data Analysis, Machine Learning'
+    },
+    {
+      name: 'Data Engineering & Cloud',
+      icon: Database,
+      description: 'Pandas, NumPy, Azure, Data Pipelines, APIs'
+    },
+    {
+      name: 'Data Visualization',
+      icon: BarChart2,
+      description: 'Matplotlib, Seaborn, Power BI, Tableau'
+    },
+    {
+      name: 'Machine Learning & Statistics',
+      icon: Brain,
+      description: 'Regression Analysis, A/B Testing, Hypothesis Testing'
+    }
   ];
 
   return (
@@ -59,9 +75,7 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-2xl font-light text-gray-900 mb-6">My Philosophy</h3>
             <p className="text-lg text-gray-600 leading-relaxed font-light">
-              "Great design is not just about making things look pretty—it's about creating 
-              experiences that feel effortless and meaningful. Every line of code and every 
-              pixel should serve a purpose."
+              "Data is not just numbers — it's the story of human behavior. The deeper you listen, the better you build."
             </p>
           </div>
         </motion.div>

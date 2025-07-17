@@ -1,3 +1,4 @@
+// src/Entities/Projects.js
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Project from '../Components/Project';
@@ -13,10 +14,62 @@ export default function Projects() {
 
   const loadProjects = async () => {
     try {
-      const data = await Project.list('-created_date');
-      setProjects(data);
-    } catch (error) {
-      console.error('Error loading projects:', error);
+      const staticProjects = [
+        {
+          id: "ribo-ltp",
+          title: "Ribo LTP Data Analysis",
+          description:
+            "Analyzes ribosome profiling and RNA-seq data post-LTP using the NOISeq package in R. Includes biotype and GC content filtering, bias detection, and differential expression analysis.",
+          image_url: "",
+          project_url: "https://github.com/jahn5244/ribo-data-analysis",
+          github_url: "https://github.com/jahn5244/ribo-data-analysis",
+          technologies: ["R", "RNA-seq", "NOISeq", "Bioconductor"]
+        },
+        {
+          id: "amazon-analysis",
+          title: "Amazon Prime Data Analysis",
+          description:
+            "Built classification models leveraging viewing preferences and user engagement metrics to predict gender of Amazon Prime users, utilizing Logistic Regression and Random Forest with model evaluation and feature interpretation.",
+          image_url: "",
+          project_url: "https://github.com/jahn5244/amazon-data-analysis",
+          github_url: "https://github.com/jahn5244/amazon-data-analysis",
+          technologies: ["Python", "Logistic Regression", "Random Forest", "pandas"]
+        },
+        {
+          id: "mice-protein",
+          title: "Mice Protein Expression Analysis",
+          description:
+            "Performs statistical analysis of protein expression in mice using efficient data structures and algorithms, with built-in test cases to ensure reproducibility and analytical precision.",
+
+          image_url: "",
+          project_url: "https://github.com/jahn5244/mice-expression-project",
+          github_url: "https://github.com/jahn5244/mice-expression-project",
+          technologies: ["Python", "pandas", "unittest"]
+        },
+        {
+            id: "telco-churn",
+            title: "Telco Churn Prediction (Work in Progress)",
+            description:
+              "Developing a full-stack machine learning pipeline to predict customer churn from the Telco dataset. Focuses on business insights, feature engineering, and deployment.",
+            image_url: "",
+            project_url: "https://github.com/johnsahn2002/churn_telco_project",
+            github_url: "https://github.com/johnsahn2002/churn_telco_project",
+            technologies: ["Python", "ML Pipeline", "EDA", "Feature Engineering", "Churn"]
+        }
+      ];
+
+      let fetchedProjects = [];
+
+      try {
+        fetchedProjects = await Project.list('-created_date');
+      } catch (error) {
+        console.warn('Project.list() failed, using static projects only:', error);
+      }
+
+      setProjects([...staticProjects, ...fetchedProjects]);
+    } catch (err) {
+      console.error('Unexpected error in loadProjects:', err);
+      setProjects([]);  // fallback if something breaks
     } finally {
       setLoading(false);
     }
@@ -36,8 +89,8 @@ export default function Projects() {
             Selected Work
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed font-light">
-            A collection of projects that showcase my passion for creating 
-            beautiful, functional digital experiences.
+            A showcase of data-driven projects blending analytical depth with functional design and real-world impact.
+
           </p>
         </motion.div>
 
@@ -55,7 +108,7 @@ export default function Projects() {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+              <ProjectCard key={project.id || index} project={project} index={index} />
             ))}
           </div>
         )}
@@ -69,7 +122,7 @@ export default function Projects() {
             className="text-center py-12"
           >
             <p className="text-gray-500 text-lg">
-              Projects coming soon. Check back later!
+              More Projects coming soon. Check back later!
             </p>
           </motion.div>
         )}
