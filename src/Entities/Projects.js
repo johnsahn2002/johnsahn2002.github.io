@@ -55,7 +55,26 @@ export default function Projects() {
             project_url: "https://github.com/johnsahn2002/churn_telco_project",
             github_url: "https://github.com/johnsahn2002/churn_telco_project",
             technologies: ["Python", "ML Pipeline", "EDA", "Feature Engineering", "Churn"]
+        },
+        {
+          id: "resume-matching",
+          title: "AI-Powered Resume–Job Matching System (WIP)",
+          description:
+            "An end-to-end NLP system that parses resumes, scrapes live job listings, and matches candidates to roles using TF-IDF, spaCy, and Sentence-BERT. Features include A/B resume testing and skill gap detection.",
+          image_url: "", // You can add a custom thumbnail image path if available
+          project_url: "https://resumejobmatchingsystem.streamlit.app/",
+          github_url: "https://github.com/johnsahn2002/resume_job_matching_system",
+          technologies: [
+            "Python",
+            "NLP",
+            "Streamlit",
+            "TF-IDF",
+            "Sentence-BERT",
+            "BeautifulSoup",
+            "PyTorch"
+          ]
         }
+
       ];
 
       let fetchedProjects = [];
